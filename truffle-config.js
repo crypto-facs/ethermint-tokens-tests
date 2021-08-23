@@ -27,7 +27,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const mnemonic = fs.readFileSync('.secret').toString().trim();
 
 const DEFAULT_MNEMNOIC = "gesture inject test cycle original hollow east ridge hen combine junk child bacon zero hope comfort vacuum milk pitch cage oppose unhappy lunar seat";
-// const remoteNodeEthermint = "awesome there minute cash write immune tag reopen price congress trouble reunion south wisdom donate credit below leave wisdom eagle sail siege rice train";
+// const DEFAULT_MNEMNOIC = "awesome there minute cash write immune tag reopen price congress trouble reunion south wisdom donate credit below leave wisdom eagle sail siege rice train";
 
 const mnemonic_24 = process.env['MNEMONIC'] || DEFAULT_MNEMNOIC;
 
@@ -72,7 +72,7 @@ module.exports = {
         new HDWalletProvider({
           mnemonic: mnemonic_24,
           providerOrUrl:
-            'http://localhost:8545'
+            'http://localhost:8545/'
         }),
       network_id: '*', // Ropsten's id
       gas: 5500000, // Ropsten has a lower block limit than mainnet
